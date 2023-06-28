@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>Age Calculator</title>
+  </head>
+  <body>
+    <section class="container">
+      <div class="input-wrapper">
+        <div id="daySection">
+          <label for="day" class="form-label">Day</label>
+          <input placeholder="DD" id="day" type="text" class="form-input" />
+          <p class="invalid" id="invalidDay">Must be a valid day</p>
+          <p class="empty-field" id="emptyDay">This field is required</p>
+        </div>
+
+        <div id="monthSection">
+          <label for="month" class="form-label">Month</label>
+          <input placeholder="MM" id="month" type="text" class="form-input" />
+          <p class="invalid" id="invalidMonth">Must be a valid month</p>
+          <p class="empty-field" id="emptyMonth">This field is required</p>
+        </div>
+
+        <div id="yearSection">
+          <label for="year" class="form-label">Year</label>
+          <input placeholder="YYYY" id="year" type="text" class="form-input" />
+          <p class="invalid" id="invalidYear">Must be in the past</p>
+          <p class="empty-field" id="emptyYear">This field is required</p>
+        </div>
+      </div>
+
+      <div class="icon-container">
+        <hr />
+        <span onclick="handleOutput();" class="icon"
+          ><img src="images/icon-arrow.svg" alt="arrow icon button" />
+        </span>
+      </div>
+      <div>
+        <h2 id="yearCount" class="num-heading">--</h2>
+        <p class="text-heading" id="yearText">years</p>
+      </div>
+      <div>
+        <h2 id="monthCount" class="num-heading">--</h2>
+        <p class="text-heading" id="monthText">months</p>
+      </div>
+      <div>
+        <h2 id="dayCount" class="num-heading">--</h2>
+        <p class="text-heading" id="dayText">days</p>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>
